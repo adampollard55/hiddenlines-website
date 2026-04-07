@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#242427">
+    <meta name="format-detection" content="telephone=no">
+    <title>Hidden Lines — Uncover problems hiding on your wall</title>
+    <meta name="description" content="Hidden Lines uses AI to detect holds on your climbing wall and generate bouldering problems at any difficulty. iOS app, one-time purchase, no subscription.">
+    <meta name="keywords" content="home wall,bouldering,spray wall,problem generator,climbing board,route setter,training board,woodie,climbing app,hold detection">
+    <link rel="canonical" href="https://hiddenlines.app/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hidden Lines — Uncover problems hiding on your wall">
+    <meta property="og:description" content="AI detects holds on your home climbing wall, then reveals climbing problems you'd never find on your own.">
+    <meta property="og:image" content="https://hiddenlines.app/icon-512.png">
+    <meta property="og:url" content="https://hiddenlines.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hidden Lines">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Hidden Lines — Uncover problems hiding on your wall">
+    <meta name="twitter:description" content="AI detects holds on your home climbing wall, then reveals climbing problems you'd never find on your own. iOS, one-time purchase.">
+    <meta name="twitter:image" content="https://hiddenlines.app/icon-512.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Hidden Lines",
+        "alternateName": "Hidden Lines: Climbing",
+        "description": "That moment on outdoor rock where you don't know if the problem goes. Where the beta isn't obvious and you aren't sure which foot to use. Hidden Lines brings that feeling to your home wall. AI detects your holds. You choose the difficulty. The app generates a problem — and from there, it's on you.",
+        "operatingSystem": "iOS 18.0+",
+        "applicationCategory": ["HealthApplication", "SportsApplication"],
+        "author": {
+            "@type": "Person",
+            "name": "Adam Pollard"
+        },
+        "url": "https://hiddenlines.app",
+        "offers": {
+            "@type": "Offer",
+            "price": "3.99",
+            "priceCurrency": "USD",
+            "description": "No ads. No subscriptions. One purchase, for less than a coffee at the climbing gym. 14-day free trial."
+        },
+        "featureList": [
+            "AI hold detection (no extra cost)",
+            "Problem generator with configuration options (difficulty, favor unused holds, etc.)",
+            "Adaptive Difficulty to fine-tune the problem generator to your wall and ability",
+            "Avoid or focus on specific hold types, e.g. avoiding crimps to rest a tweaked pulley",
+            "Create your own problems from scratch by tapping holds",
+            "Hold heat map: see which holds are overused and which are gathering dust",
+            "Rest timer",
+            "Compatible with all wall types (e.g. feet allowed on handholds vs dedicated footholds)",
+            "Save, manage, sort, and filter unlimited problems",
+            "Track favorites/projects and which problems you've sent",
+            "iPhone and iPad versions",
+            "iCloud sync across all your devices",
+            "Supports multiple walls",
+            "Light and dark themes + hold display customisation"
+        ]
+    }
+    </script>
+
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #242427;
+            color: #f5f5f7;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* --- Hero --- */
+
+        .hero {
+            text-align: center;
+            padding: 80px 24px 48px;
+        }
+
+        .hero-inner {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .hero-icon {
+            width: 256px;
+            height: 256px;
+            margin-bottom: 32px;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .hero-tagline {
+            font-size: clamp(1.125rem, 3vw, 1.25rem);
+            font-weight: 500;
+            color: #98989d;
+            margin-bottom: 12px;
+        }
+
+        .hero-sub {
+            font-size: clamp(0.9375rem, 2.5vw, 1rem);
+            font-weight: 400;
+            color: #68686d;
+            line-height: 1.6;
+            max-width: 520px;
+            margin: 0 auto 32px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: rgba(47, 175, 198, 0.60);
+            color: #fff;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 16px 40px;
+            border-radius: 999px;
+            transition: opacity 0.15s ease;
+        }
+
+        .cta-button:hover {
+            opacity: 0.85;
+        }
+
+        .cta-button:active {
+            opacity: 0.7;
+        }
+
+        /* --- Screenshots --- */
+
+        .screenshots {
+            padding: 24px 0 48px;
+        }
+
+        .screenshots-track {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 36px;
+            padding: 24px;
+        }
+
+        .screenshots-track img {
+            flex: 0 0 auto;
+            width: 220px;
+            height: auto;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 24px rgba(0, 0, 0, 0.5);
+        }
+
+        /* (unused CSS removed — How It Works, Features, Quotes, Pricing all cut from the page) */
+
+        /* --- Footer --- */
+
+        footer {
+            padding: 32px 24px;
+            text-align: center;
+        }
+
+        .footer-inner {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            font-size: 0.8125rem;
+            color: #98989d;
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #2fafc6;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links .sep {
+            margin: 0 8px;
+            opacity: 0.4;
+        }
+
+        .footer-copy {
+            font-size: 0.75rem;
+            color: #58585d;
+        }
+
+        /* --- Responsive --- */
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 960px;
+            }
+
+            .hero {
+                padding: 120px 24px 64px;
+            }
+
+            .screenshots-track {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .screenshots-track img {
+                width: 260px;
+            }
+
+            .screenshots-track img:nth-child(1) { order: 2; } /* main screen -> middle */
+            .screenshots-track img:nth-child(2) { order: 1; } /* problem list -> left */
+            .screenshots-track img:nth-child(3) { order: 3; } /* problem config -> right */
+        }
+
+        @media (min-width: 1024px) {
+            .hero {
+                padding: 140px 24px 72px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-inner">
+            <!-- Spiderweb logo — same node positions and MST as app, proportions tuned for web hero (closer to onboarding's delicate style than the bold app icon) -->
+            <svg class="hero-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="128" height="128" role="img" aria-label="Hidden Lines logo">
+                <g fill="#2fafc6" stroke="#2fafc6" stroke-width="1.0" stroke-linecap="round">
+                    <line x1="46.9" y1="90.0" x2="35.4" y2="67.8"/>
+                    <line x1="35.4" y1="67.8" x2="19.8" y2="61.0"/>
+                    <line x1="35.4" y1="67.8" x2="46.1" y2="45.1"/>
+                    <line x1="46.1" y1="45.1" x2="23.9" y2="31.1"/>
+                    <line x1="46.1" y1="45.1" x2="80.3" y2="30.6"/>
+                    <line x1="80.3" y1="30.6" x2="68.3" y2="10.0"/>
+                    <circle cx="46.9" cy="90.0" r="1.2"/>
+                    <circle cx="35.4" cy="67.8" r="1.2"/>
+                    <circle cx="19.8" cy="61.0" r="1.2"/>
+                    <circle cx="46.1" cy="45.1" r="1.2"/>
+                    <circle cx="23.9" cy="31.1" r="1.2"/>
+                    <circle cx="80.3" cy="30.6" r="1.2"/>
+                    <circle cx="68.3" cy="10.0" r="1.2"/>
+                </g>
+            </svg>
+            <h1>Hidden Lines</h1>
+            <p class="hero-tagline">Uncover problems hiding on your wall.</p>
+            <p class="hero-sub">AI detects the holds on your home climbing wall. Tap the sparkles to generate a new problem to try — or create one yourself.</p>
+            <!-- TODO: Replace # with App Store URL when available -->
+            <a href="#" class="cta-button">Download on the App Store</a>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="screenshots">
+        <div class="screenshots-track">
+            <img src="screenshots/main-screen.jpg" alt="Hidden Lines — main screen showing a wall with a typical problem" width="1320" height="2868">
+            <img src="screenshots/problem-list.png" alt="Hidden Lines — list of saved problems" width="1320" height="2868">
+            <img src="screenshots/problem-config.png" alt="Hidden Lines — problem configuration" width="1320" height="2868">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <p class="footer-links">
+                <a href="privacy/index.html">Privacy Policy</a>
+                <span class="sep">|</span>
+                <a href="mailto:support@hiddenlines.app">Contact</a>
+            </p>
+            <p class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> Hidden Lines</p>
+        </div>
+    </footer>
+
+</body>
+</html>
